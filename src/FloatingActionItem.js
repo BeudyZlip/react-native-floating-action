@@ -67,7 +67,7 @@ class FloatingActionItem extends Component {
           key="text"
           style={[
             styles.textContainer,
-            styles[`${position}TextContainer`],
+            // styles[`${position}TextContainer`],
             {
               backgroundColor: textBackground,
               elevation: textElevation || elevation,
@@ -270,21 +270,24 @@ const styles = StyleSheet.create({
   container: {
     elevation: 0,
     flex: 1,
-    flexDirection: "column"
+    flexDirection: "column",
+    alignItems: 'flex-end',
   },
   actionContainer: {
     elevation: 0,
     flex: 1,
     flexDirection: "row",
     alignItems: 'center',
+    justifyContent: 'flex-end',
+    minWidth: 335,
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
   },
   textContainer: {
     paddingHorizontal: 8,
     elevation: 5,
     borderRadius: 4,
-    height: 22
+    height: 22,
   },
   leftTextContainer: {
     marginLeft: 14
@@ -299,7 +302,8 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     justifyContent: "center",
-    elevation: 5
+    elevation: 5,
+    marginLeft: 14,
   },
   iconLogo: {
     resizeMode: "cover",
