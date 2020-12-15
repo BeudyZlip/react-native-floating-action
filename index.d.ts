@@ -51,7 +51,7 @@ declare module "react-native-floating-action" {
     dismissKeyboardOnPress?: boolean;
     shadow?: shadowType;
     onPressItem?: (name?: string) => void;
-    onPressMain?: () => void;
+    onPressMain?: Function;
     onPressBackdrop?: () => void;
     onClose?: () => void;
     onOpen?: () => void;
